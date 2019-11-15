@@ -40,6 +40,22 @@ Crear `Python Script` para generar los códigos.
 nano code_generator.py
 ```
 ```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*
+
+"""
+code_generator - Genera códigos de barra y QR
+Copyleft (c) 2019 Michel Vega Fuenzalida (michel.vega.f@gmail.com)
+"""
+
+__version__ = "1.0"
+__date__ = "2017-08-31"
+
+
+import sys
+if int(sys.version_info.major) < 3 or (int(sys.version_info.major) == 3 \
+    and int(sys.version_info.minor) < 3):
+    raise ImportError("Se requiere Python versión 3 o superior")
 import pyqrcode
 import treepoem
 import os
