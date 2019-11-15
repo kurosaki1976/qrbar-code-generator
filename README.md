@@ -36,6 +36,9 @@ nano listado.json
 
 Crear `Python Script` para generar los códigos.
 
+```bash
+nano code_generator.py
+```
 ```python
 import pyqrcode
 import treepoem
