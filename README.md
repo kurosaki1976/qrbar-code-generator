@@ -1,7 +1,7 @@
 # Sencillo script de Python para generar Códigos de Barra y QR
 
 ## Autor
-Michel Vega Fuenzalida
+[Michel Vega Fuenzalida](michel.vega.f@gmail.com)
 
 ## Instalación
 
@@ -44,9 +44,10 @@ nano code_generator.py
 # -*- coding: utf-8 -*
 
 """
-code_generator - Genera códigos de barra y QR
+code_generator.py - Genera códigos de barra y QR
 Copyleft (c) 2019 Michel Vega Fuenzalida (michel.vega.f@gmail.com)
 """
+
 
 __version__ = "1.0"
 __date__ = "2017-08-31"
