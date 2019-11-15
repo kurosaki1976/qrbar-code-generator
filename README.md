@@ -50,7 +50,7 @@ Copyleft (c) 2019 Michel Vega Fuenzalida (michel.vega.f@gmail.com)
 
 
 __version__ = "1.0"
-__date__ = "2017-08-31"
+__date__ = "2019-11-14"
 
 
 import sys
