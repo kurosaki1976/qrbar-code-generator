@@ -1,7 +1,7 @@
 # Sencillo script de Python para generar Códigos de Barra y QR
 
 ## Autor
-[Michel Vega Fuenzalida](michel.vega.f@gmail.com)
+* [Michel Vega Fuenzalida](michel.vega.f@gmail.com)
 
 ## Instalación
 
@@ -119,6 +119,12 @@ for lista in listado:
         os.remove('text.txt')
 
         generate_qr(texto.read(), name)
+```
+
+## Ejecución
+
+```bash
+python code_generator.py
 ```
 
 ## Referencias
