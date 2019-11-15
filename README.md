@@ -1,8 +1,5 @@
 # Sencillo script de Python para generar Códigos de Barra y QR
 
-## Autor
-* [Michel Vega Fuenzalida](michel.vega.f@gmail.com)
-
 ## Instalación
 
 Instalar dependecias de `Python`.
