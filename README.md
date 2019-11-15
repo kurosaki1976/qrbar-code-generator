@@ -102,5 +102,5 @@ for lista in listado:
 ```
 
 ## Referencias
-[Generate QR code image with Python, Pillow, qrcode](https://note.nkmk.me/en/python-pillow-qrcode/)
+* [Generate QR code image with Python, Pillow, qrcode](https://note.nkmk.me/en/python-pillow-qrcode/)
 
