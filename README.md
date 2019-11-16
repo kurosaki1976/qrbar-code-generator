@@ -129,6 +129,10 @@ Un listado `ls *.png` devolvería.
 'Ginny Weasley_CodigoBarra.png'  'Harry Potter_CodigoQR.png'     'Ron Weasly_CodigoBarra.png'
 ```
 
+![Hermione Granger. Código QR](files/Hermione Granger_CodigoQR.png "Hermione Granger")
+
+![Draco Malfoy. Código de Barras](files/Draco Malfoy_CodigoBarra.png "Draco Malfoy")
+
 ## Referencias
 
 * [Generate QR code image with Python, Pillow, qrcode](https://note.nkmk.me/en/python-pillow-qrcode/)
