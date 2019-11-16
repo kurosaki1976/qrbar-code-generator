@@ -121,6 +121,16 @@ for lista in listado:
 python qrbar_code_generator
 ```
 
+La ejecución del comando anterior generará el siguiente listado de archivos.
+
+```bash
+ls *.png
+
+'Draco Malfoy_CodigoBarra.png'   'Ginny Weasley_CodigoQR.png'    'Hermione Granger_CodigoBarra.png'  'Ron Weasly_CodigoQR.png'
+'Draco Malfoy_CodigoQR.png'      'Harry Potter_CodigoBarra.png'  'Hermione Granger_CodigoQR.png'
+'Ginny Weasley_CodigoBarra.png'  'Harry Potter_CodigoQR.png'     'Ron Weasly_CodigoBarra.png'
+```
+
 ## Referencias
 
 * [Generate QR code image with Python, Pillow, qrcode](https://note.nkmk.me/en/python-pillow-qrcode/)
