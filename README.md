@@ -93,8 +93,6 @@ for lista in listado:
         area = uno['area']
         cargo = uno['cargo']
 
-        genBARcode()
-
         fichero = open('texto.txt', 'w')
         fichero.write("ID:" + str(id))
         fichero.write("\n")
@@ -108,11 +106,12 @@ for lista in listado:
         fichero.write("\n")
 
         texto = open('texto.txt', 'r')
-
         fichero.close()
-        os.remove('texto.txt')
 
+        genBARcode()
         genQRcode(texto.read(), nombre)
+
+        os.remove('texto.txt')
 ```
 
 ## Ejecución
