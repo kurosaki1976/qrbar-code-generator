@@ -7,7 +7,7 @@ Instalar dependecias de `Python`.
 ```bash
 pip install pyqrcode
 pip install pypng
-pip install treepoem
+pip install python-barcode
 ```
 
 Crear fichero `Json` que contiene los datos para generar los códigos.
@@ -16,38 +16,30 @@ Crear fichero `Json` que contiene los datos para generar los códigos.
 nano listado.json
 ```
 ```json
-[{ "id": 1401, "name": "Rolando Lawrence Contreras", "ci": 66121002785, "area": "Direccion", "cargo": "Director" },
-{ "id": 1410, "name": "Hector Suarez Rigñack", "ci": 71072324823, "area": "Economia", "cargo": "Especialista C en Gestion Economica (EP)" },
-{ "id": 1402, "name": "Maura Santiesteban Batista", "ci": 64020425355, "area": "Economia", "cargo": "Tecnico C en Gestion Economica" },
-{ "id": 1403, "name": "Ana Gloria Jaime Verde", "ci": 65112605519, "area": "Capital Humano", "cargo": "Especialista C en Gestion de Capital Humano" },
-{ "id": 1416, "name": "Yunaisy Hechavarria Pita", "ci": 75033105377, "area": "Mercadotecnia", "cargo": "Especialista en Ciencas Informaticas" },
-{ "id": 1418, "name": "Carlos Medina Peña", "ci": 63030427364, "area": "Direccion", "cargo": "Chofer D" },
-{ "id": 1408, "name": "Pedro Perez Florain", "ci": 84090729068, "area": "Comunicaciones", "cargo": "Tecnico en Ciencias Informaticas" },
-{ "id": 1409, "name": "Jorge Leiva Mendez", "ci": 85032522980, "area": "Ofimatica", "cargo": "Especialista en Ciencias Informaticas" },
-{ "id": 1407, "name": "Osmel Pazos Acosta", "ci": 85091229141, "area": "Telematica", "cargo": "Administrador Superior de Redes Informaticas" },
-{ "id": 1405, "name": "Julio Lopez Hernandez", "ci": 86071126940, "area": "Implantacion", "cargo": "Especialista C en Ciencias Informaticas (EP)" },
-{ "id": 1413, "name": "Nereida Barbara Rosa Acuña", "ci": 61121600596, "area": "Implantacion", "cargo": "Especialista en Ciencias Informaticas" },
-{ "id": 1415, "name": "Ailin Hechavarria Palacios", "ci": 89090747451, "area": "Implantacion", "cargo": "Especialista en Ciencias Informaticas" },
-{ "id": 1419, "name": "Michel Ernesto Vega Fuenzalida", "ci": 75110206587, "area": "Implantacion", "cargo": "Especialista en Ciencias Informaticas" }]
+[{ "id": 1000, "nombre": "Ixen Rodríguez Pérez", "ci": 19111678901, "area": "Informática", "cargo": "Especialista B Ciencias Informáticas" },
+{ "id": 1001, "nombre": "Misleydi Ferguson Jimenez", "ci": 19111678902, "area": "Informática", "cargo": "Técnica Ciencias Informáticas" },
+{ "id": 1002, "nombre": "Aizen Rodríguez Ferguson", "ci": 19111678903, "area": "Primaria", "cargo": "Alumno 2do grado" },
+{ "id": 1003, "nombre": "Aiza Rodríguez Ferguson", "ci": 19111678904, "area": "Circulo Infantil", "cargo": "Tercer año de vida" }]
 ```
 
 Crear `Python Script` para generar los códigos.
 
 ```bash
-nano code_generator.py
+nano qrbar_code_generator
 ```
 ```python
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*
+# -*- coding: utf-8 -*-
 
 """
-code_generator.py - Genera códigos de barra y QR
+qrbar_code_generator - Genera códigos de Barra y QR
 Copyleft (c) 2019 Michel Vega Fuenzalida (michel.vega.f@gmail.com)
+                  Ixen Rodríguez Pérez (ixenrp1976@gmail.com)
 """
 
 
-__version__ = "1.0"
-__date__ = "2019-11-14"
+__version__ = "1.1"
+__date__ = "2019-11-16"
 
 
 import sys
@@ -55,31 +47,30 @@ if int(sys.version_info.major) < 3 or (int(sys.version_info.major) == 3 \
     and int(sys.version_info.minor) < 3):
     raise ImportError("Se requiere Python versión 3 o superior")
 import pyqrcode
-import treepoem
+import barcode
+from barcode.writer import ImageWriter
 import os
 import json
 import png
 
 
-def generate_qr(texto, name):
+def genQRcode(texto, nombre):
     """
-    método que genera los ficheros con los códigos QR
+    método para generar códigos QR
     """
     codigo_qr = pyqrcode.create(texto)
-    nombre_fichero = name + '_CodigoQR.png'
+    nombre_fichero = nombre + '_CodigoQR.png'
     codigo_qr.png(nombre_fichero, scale=8)
 
 
-def generate_brcode(id, name):
+def genBARcode():
     """
-    método que genera los ficheros con los Código de Barras
+    método para generar códigos de Barras
+    `code39`, `code128`, `ean`, `ean13`, `ean8`, `gtin`, `issn`, `upc`, `upca`
     """
-    image = treepoem.generate_barcode(
-        barcode_type='code39',
-        data=str(id),
-    )
-    nombre_fichero = name + '_CodigoBarra.png'
-    image.convert('1').save(nombre_fichero)
+    BARCODE = barcode.get_barcode_class('code128')
+    codigo_bar = BARCODE(str(id) + str(ci), writer=ImageWriter())
+    nombre_fichero = codigo_bar.save(nombre + '_CodigoBarra')
 
 
 # leer listado
@@ -91,17 +82,17 @@ with open('listado.json', 'r') as inf:
 for lista in listado:
     for uno in lista:
         id = uno['id']
-        name = uno['name']
+        nombre = uno['nombre']
         ci = uno['ci']
         area = uno['area']
         cargo = uno['cargo']
 
-        generate_brcode(ci, name)
+        genBARcode()
 
-        fichero = open('text.txt', 'w')
+        fichero = open('texto.txt', 'w')
         fichero.write("ID:" + str(id))
         fichero.write("\n")
-        fichero.write("NO:" + str.upper(name))
+        fichero.write("NO:" + str.upper(nombre))
         fichero.write("\n")
         fichero.write("CI:" + str(ci))
         fichero.write("\n")
@@ -110,18 +101,18 @@ for lista in listado:
         fichero.write("CA:" + str.upper(cargo))
         fichero.write("\n")
 
-        texto = open('text.txt', 'r')
+        texto = open('texto.txt', 'r')
 
         fichero.close()
-        os.remove('text.txt')
+        os.remove('texto.txt')
 
-        generate_qr(texto.read(), name)
+        genQRcode(texto.read(), nombre)
 ```
 
 ## Ejecución
 
 ```bash
-python code_generator.py
+python qrbar_code_generator
 ```
 
 ## Referencias
