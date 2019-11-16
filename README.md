@@ -38,7 +38,7 @@ nano qrbar_code_generator
 # -*- coding: utf-8 -*-
 
 """
-qrbar_code_generator - Genera códigos de Barra y QR
+qrbar_code_generator - Genera códigos de Barras y QR
 Copyleft (c) 2019 Michel Vega Fuenzalida (michel.vega.f@gmail.com)
                   Ixen Rodríguez Pérez (ixenrp1976@gmail.com)
 """
@@ -51,7 +51,7 @@ __date__ = "2019-11-16"
 import sys
 if int(sys.version_info.major) < 3 or (int(sys.version_info.major) == 3 \
     and int(sys.version_info.minor) < 3):
-    raise ImportError("Se requiere Python versión 3 o superior")
+    raise ImportError("Se requiere Python versión 3 o superior!")
 import pyqrcode
 import barcode
 from barcode.writer import ImageWriter
