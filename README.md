@@ -39,8 +39,8 @@ nano qrbar_code_generator
 
 """
 qrbar_code_generator - Genera códigos de Barras y QR
-Copyleft (c) 2019 Michel Vega Fuenzalida (michel.vega.f@gmail.com)
-                  Ixen Rodríguez Pérez (ixenrp1976@gmail.com)
+Copyleft (c) 2019 Ixen Rodríguez Pérez (ixenrp1976@gmail.com)
+                  Michel Vega Fuenzalida (michel.vega.f@gmail.com)
 """
 
 
@@ -108,6 +108,7 @@ for lista in listado:
         texto = open('texto.txt', 'r')
         fichero.close()
 
+        # generar códigos de Barras y QR
         genBARcode()
         genQRcode(texto.read(), nombre)
 
