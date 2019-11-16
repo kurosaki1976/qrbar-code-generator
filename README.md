@@ -19,10 +19,10 @@ Crear fichero `Json` que contiene los datos para generar los códigos.
 nano listado.json
 ```
 ```json
-[{ "id": 1000, "nombre": "Ixen Rodríguez Pérez", "ci": 19111678901, "area": "Informática", "cargo": "Especialista B Ciencias Informáticas" },
-{ "id": 1001, "nombre": "Misleydi Ferguson Jimenez", "ci": 19111678902, "area": "Informática", "cargo": "Técnica Ciencias Informáticas" },
-{ "id": 1002, "nombre": "Aizen Rodríguez Ferguson", "ci": 19111678903, "area": "Primaria", "cargo": "Alumno 2do grado" },
-{ "id": 1003, "nombre": "Aiza Rodríguez Ferguson", "ci": 19111678904, "area": "Circulo Infantil", "cargo": "Tercer año de vida" }]
+[{ "id": 1000, "nombre": "Harry Potter", "ci": 80073100001, "area": "Gryffindor", "cargo": "Auror" },
+{ "id": 1001, "nombre": "Ginny Weasley", "ci": 81081100002, "area": "Informática", "cargo": "Profesora Colegio Hogwarts de Magia y Hechicería" },
+{ "id": 1002, "nombre": "Ron Weasly", "ci": 80030100003, "area": "Gryffindor", "cargo": "Auror" },
+{ "id": 1003, "nombre": "Hermione Granger", "ci": 79091900004, "area": "Gryffindor", "cargo": "Ministra de Magia del Reino Unido de Gran Bretaña e Irlanda del Norte" }]
 ```
 
 Crear `Python Script` para generar los códigos.
