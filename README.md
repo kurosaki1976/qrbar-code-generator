@@ -21,11 +21,11 @@ nano listado.json
 ```
 ```json
 [
-    { "id": 1000, "nombre": "Harry Potter", "ci": 80073100001, "area": "Casa Gryffindor", "cargo": "Auror" },
-    { "id": 1001, "nombre": "Ginny Weasley", "ci": 81081100002, "area": "Casa Gryffindor", "cargo": "Profesora Colegio Hogwarts de Magia y Hechicería" },
-    { "id": 1002, "nombre": "Ron Weasly", "ci": 80030100003, "area": "Casa Gryffindor", "cargo": "Auror" },
-    { "id": 1003, "nombre": "Hermione Granger", "ci": 79091900004, "area": "Casa Gryffindor", "cargo": "Ministra de Magia del Reino Unido de Gran Bretaña e Irlanda del Norte" },
-    { "id": 1004, "nombre": "Draco Malfoy", "ci": 80060500005, "area": "Casa Slytherin", "cargo": "Mortífago" }
+    { "id": 1000, "nombre": "Harry Potter", "ci": 80073100001, "area": "Gryffindor", "cargo": "Auror" },
+    { "id": 1001, "nombre": "Ginny Weasley", "ci": 81081100002, "area": "Gryffindor", "cargo": "Profesora Colegio Hogwarts de Magia y Hechicería" },
+    { "id": 1002, "nombre": "Ron Weasly", "ci": 80030100003, "area": "Gryffindor", "cargo": "Auror" },
+    { "id": 1003, "nombre": "Hermione Granger", "ci": 79091900004, "area": "Gryffindor", "cargo": "Ministra de Magia del Reino Unido de Gran Bretaña e Irlanda del Norte" },
+    { "id": 1004, "nombre": "Draco Malfoy", "ci": 80060500005, "area": "Slytherin", "cargo": "Mortífago" }
 ]
 ```
 
@@ -95,15 +95,15 @@ for lista in listado:
         cargo = uno['cargo']
 
         fichero = open('texto.txt', 'w')
-        fichero.write("ID:" + str(id))
+        fichero.write("#:" + str(id))
         fichero.write("\n")
-        fichero.write("NO:" + str.upper(nombre))
+        fichero.write("NAME:" + str.upper(nombre))
         fichero.write("\n")
-        fichero.write("CI:" + str(ci))
+        fichero.write("ID:" + str(ci))
         fichero.write("\n")
-        fichero.write("AR:" + str.upper(area))
+        fichero.write("HOUSE:" + str.upper(area))
         fichero.write("\n")
-        fichero.write("CA:" + str.upper(cargo))
+        fichero.write("JOB:" + str.upper(cargo))
         fichero.write("\n")
 
         texto = open('texto.txt', 'r')
