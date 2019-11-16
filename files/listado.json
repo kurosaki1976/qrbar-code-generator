@@ -1,0 +1,7 @@
+[
+    { "id": 1000, "nombre": "Harry Potter", "ci": 80073100001, "area": "Casa Gryffindor", "cargo": "Auror" },
+    { "id": 1001, "nombre": "Ginny Weasley", "ci": 81081100002, "area": "Casa Gryffindor", "cargo": "Profesora Colegio Hogwarts de Magia y Hechicería" },
+    { "id": 1002, "nombre": "Ron Weasly", "ci": 80030100003, "area": "Casa Gryffindor", "cargo": "Auror" },
+    { "id": 1003, "nombre": "Hermione Granger", "ci": 79091900004, "area": "Casa Gryffindor", "cargo": "Ministra de Magia del Reino Unido de Gran Bretaña e Irlanda del Norte" },
+    { "id": 1004, "nombre": "Draco Malfoy", "ci": 80060500005, "area": "Casa Slytherin", "cargo": "Mortífago" }
+]
