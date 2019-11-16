@@ -119,5 +119,9 @@ python qrbar_code_generator
 ```
 
 ## Referencias
+
 * [Generate QR code image with Python, Pillow, qrcode](https://note.nkmk.me/en/python-pillow-qrcode/)
+* [python-barcode 0.10.0](https://pypi.org/project/python-barcode/)
+* [how to generate barcode in python 3.7](https://stackoverflow.com/questions/57427243/how-to-generate-barcode-in-python-3-7)
+* [How can I use a variable to generate barcode with python-barcode](https://stackoverflow.com/questions/51826802/how-can-i-use-a-variable-to-generate-barcode-with-python-barcode/51826815)
 
