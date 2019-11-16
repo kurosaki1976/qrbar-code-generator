@@ -133,7 +133,7 @@ Un listado `ls *.png` devolvería.
 
 > Código QR para Hermione Granger
 
-<img src="files/Draco Malfoy_CodigoBarra.png" alt="Draco Malfoy. Código de Barras" title="Draco Malfoy. Código de Barras" />
+<img src="files/Draco Malfoy_CodigoBarra.png" alt="Draco Malfoy. Código de Barras" title="Draco Malfoy. Código de Barras" width="25%" />
 
 > Código de Barras para Draco Malfoy
 
