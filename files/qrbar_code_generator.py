@@ -62,15 +62,15 @@ for lista in listado:
         cargo = uno['cargo']
 
         fichero = open('texto.txt', 'w')
-        fichero.write("ID:" + str(id))
+        fichero.write("#:" + str(id))
         fichero.write("\n")
-        fichero.write("NO:" + str.upper(nombre))
+        fichero.write("NAME:" + str.upper(nombre))
         fichero.write("\n")
-        fichero.write("CI:" + str(ci))
+        fichero.write("ID:" + str(ci))
         fichero.write("\n")
-        fichero.write("AR:" + str.upper(area))
+        fichero.write("HOUSE:" + str.upper(area))
         fichero.write("\n")
-        fichero.write("CA:" + str.upper(cargo))
+        fichero.write("JOB:" + str.upper(cargo))
         fichero.write("\n")
 
         texto = open('texto.txt', 'r')
