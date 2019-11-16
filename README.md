@@ -130,8 +130,9 @@ Un listado `ls *.png` devolvería.
 ```
 
 <img src="files/Hermione Granger_CodigoQR.png" alt="Hermione Granger. Código QR" title="Hermione Granger. Código QR" />
-
-![Draco Malfoy. Código de Barras](files/Draco Malfoy_CodigoBarra.png)
+> Códido QR de Hermione Granger
+<img src="files/Draco Malfoy_CodigoBarra.png" alt="Draco Malfoy. Código de Barras" title="Draco Malfoy. Código de Barras" />
+> Códido de Barras de Draco Malfoy
 
 ## Referencias
 
