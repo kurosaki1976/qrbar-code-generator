@@ -129,13 +129,8 @@ Un listado `ls *.png` devolvería.
 'Ginny Weasley_CodigoBarra.png'  'Harry Potter_CodigoQR.png'     'Ron Weasly_CodigoBarra.png'
 ```
 
-<img src="files/Hermione Granger_CodigoQR.png" alt="Hermione Granger. Código QR" title="Hermione Granger. Código QR" width="25%"/>
-
-> Código QR para Hermione Granger
-
-<img src="files/Draco Malfoy_CodigoBarra.png" alt="Draco Malfoy. Código de Barras" title="Draco Malfoy. Código de Barras" width="25%" />
-
-> Código de Barras para Draco Malfoy
+| <img src="files/Hermione Granger_CodigoQR.png" alt="Hermione Granger. Código QR" title="Hermione Granger. Código QR" width="25%"/> | <img src="files/Draco Malfoy_CodigoBarra.png" alt="Draco Malfoy. Código de Barras" title="Draco Malfoy. Código de Barras" width="25%" /> |
+| > Código QR para Hermione Granger | > Código de Barras para Draco Malfoy |
 
 ## Referencias
 
